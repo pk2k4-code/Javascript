@@ -29,3 +29,5 @@ else{
 // To get the length of a string we can use string.length
 
 // The isNaN() function is used to determine whether a value is NaN (Not-a-Number) or not. It returns true if the value is NaN, and false otherwise. For example, isNaN(NaN) will return true, while isNaN(42) will return false. However, it is important to note that isNaN() has some quirks. For example, isNaN("hello") will return true because "hello" cannot be converted to a number. But isNaN("42") will return false because "42" can be converted to the number 42. To avoid these quirks, we can use the Number.isNaN() method, which only returns true for actual NaN values and not for other non-numeric values. For example, Number.isNaN(NaN) will return true, while Number.isNaN("hello") will return false.
+
+// If we have to determine the length of a string use str.length not str.length() because length is a property in javascript and not a function like it is in java.

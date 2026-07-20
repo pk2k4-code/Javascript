@@ -77,3 +77,44 @@ function outerFunction(outerVariable) {
         return `Outer: ${outerVariable}, Inner: ${innerVariable}`;  // here we can see that in this inner function we are able to access the outerVariable from the outerFunction even after it has finished executing.
     };
 }
+
+// The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. It does not modify the original array. For example, if we have an array of numbers and we want to create a new array with each number doubled, we can use the map() method like this:
+let numbers = [1, 2, 3, 4, 5];
+let doubledNumbers = numbers.map((num) => num * 2);
+console.log(doubledNumbers);  // Output: [2, 4, 6, 8, 10]
+// It is important to note that the map() method does not change the original array, it returns a new array with the modified values.
+// It can also be used with an arrow function like if we need to square an array of numbers we can do it like this:
+const squareNumbers = (arr) => {
+    return arr.map((num) => num*num);
+}
+
+// the this keyword in JavaScript refers to the object that is currently executing the code. It can be used to access properties and methods of the current object. The value of this depends on how a function is called. For example, in a method of an object, this refers to the object itself, while in a regular function, this refers to the global object (window in browsers). In strict mode, this will be undefined in a regular function.
+// for example, if we have an object person with a method greet, we can use this to access the name property of the person object like this:
+let person = {
+    name: "Alice",
+    greet: function() {
+        return `Hello, my name is ${this.name}`;
+    }
+};
+console.log(person.greet());  // Output: "Hello, my name is Alice"
+
+
+//Create an object person with a method introduce() that uses this, additionally add properties of name & age that will result in Hi, my name is Hitesh and I am 19.5 years old on calling introduce()
+const person = {
+    name: "Hitesh",
+    age: 19.5,
+    introduce() {
+        return `Hi, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+};
+// Now here while writing the introduce method inside the function we write it in this way and not like const introduce = function(){....} because inside an object we dont create variables, we create properties and thus we cant use the let and const keywords. So we can write it like this introduce: function(){....} or we can write it in this way introduce(){....} which is a shorthand for the same thing. And when we call person.introduce() it will return the string "Hi, my name is Hitesh and I am 19.5 years old."
+// And also inside an object we dont use the arrow function syntax for methods because the this keyword inside an arrow function does not refer to the object itself, but rather to the enclosing lexical context. So if we use an arrow function for the introduce method, this.name and this.age will be undefined. Thus we should use the regular function syntax for methods inside objects. Lexical context is the context in which a function is defined, and it determines the value of this based on where the function is defined, not where it is called. So if we use an arrow function for the introduce method, this will refer to the global object (window in browsers) instead of the person object, and thus this.name and this.age will be undefined.
+
+
+// Write a function outer() that contains another function inner() and returns a value of 'Inner function called' on calling outer()
+function outer() {
+    function inner() {
+        return 'Inner function called';
+    }
+    return inner();
+}
