@@ -118,3 +118,19 @@ function outer() {
     }
     return inner();
 }
+
+
+// When writing methods inside a class, JavaScript automatically assumes they are functions. So we can write them without the function keyword. For example, if we have a class Person with a method greet, we can write it like this:
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+
+    greet() {
+        return `Hello, my name is ${this.name}`;
+    }
+}
+// But outside we would write it with the function keyword like this:
+function greet() {
+    return `Hello, my name is ${this.name}`;
+}
