@@ -19,3 +19,8 @@ const p1 = new Person('Priyanshu');
 // So the object p1 will have the name property inside of it as name = 'Priyanshu', but there will not be any greet inside of p1, instead JavaScript secretly stores a link from p1 to Person.prototype and this hidden link is called the "Object's Prototype".
 // Now suppose we write p1.greet(), so how will JavaScript find this method:
 // First it looks inside of p1 and it finds no greet(), then it follows the hidden link Person.prototype and reaches it and searches for greet() there and finds it
+
+
+// When inheriting from another object use Object.setPrototypeOf(obj, parentObj) or Object.create(parentObj).
+
+// When inheriting between constructor function or classes use child.prototype = Object.create(parent.prototype) and child.prototype.constructor = child. This is because when we create a new object using a constructor function, the new object inherits from the constructor function's prototype. So, if we want to create a new object that inherits from another object, we need to set the prototype of the new object's constructor function to be an object that inherits from the parent object's prototype. This way, the new object will have access to the properties and methods of the parent object through the prototype chain.

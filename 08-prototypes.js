@@ -47,3 +47,27 @@ let audi = {
 Object.setPrototypeOf(audi, car);
 console.log(`Audi `, Object.getPrototypeOf(audi));   // output: Audi  { horn: 1, tyres: 4, windows: 4, engine: 1 }
 console.log(`Audi has ${audi.horn} horn, ${audi.tyres} tyres, ${audi.windows} windows, ${audi.engine} engine and its model is ${audi.model} and its color is ${audi.color} and its price is ${audi.price}.`);
+
+
+// Suppose we have an Animal:
+function Animal() {}
+Animal.prototype.speak = function() {
+    return "Animal speaking";
+};
+// Now when we do:
+const animal = new Animal();
+// Javascript automatically does this:
+const animal = {};
+Object.setPrototypeOf(animal, Animal.prototype);
+// Now the chain is : animal -> Animal.prototype -> Object.prototype
+// Now if we create a new animal dog and we want to set prototype of dog to be animal, we can do it like this:
+function Dog() {}
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;  // we write this line because if we do: Dog.prototype = Object.create(Animal.prototype); then the constructor of Dog will be Animal, so we need to set it back to Dog. Now if we create a new dog:
+const dog = new Dog();
+console.log(dog.constructor);  // This would have given Animal if we have not written that line above but now it will give Dog because we have set the constructor of Dog back to Dog.
+
+
+// When inheriting from another object use Object.setPrototypeOf(obj, parentObj) or Object.create(parentObj).
+
+// When inheriting between constructor function or classes use child.prototype = Object.create(parent.prototype) and child.prototype.constructor = child. This is because when we create a new object using a constructor function, the new object inherits from the constructor function's prototype. So, if we want to create a new object that inherits from another object, we need to set the prototype of the new object's constructor function to be an object that inherits from the parent object's prototype. This way, the new object will have access to the properties and methods of the parent object through the prototype chain.
