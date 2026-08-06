@@ -41,7 +41,7 @@ Array.prototype.priyanshu = function() {
 }
 
 let myArray = [1, 2, 3];
-console.log(myArray.priyanshu()); // Output: "This is a custom method added to the Array prototype by Priyanshu. And the array is: 1,2,3";
+console.log(myArray.priyanshu()); // Output: "This is a custom method added to the Array prototype by Priyanshu. And the array is: 1,2,3"
 // Now here the prototype chain for myArray is: myArray -> Array.prototype -> Object.prototype -> null. When we call myArray.priyanshu(), JavaScript first looks for the priyanshu method on myArray itself. Since it doesn't find it there, it looks for it on Array.prototype, where it finds the method we added. If it didn't find it there, it would continue looking up the prototype chain until it reached null. This demonstrates how we can extend built-in objects like Array with our own custom methods, and how the prototype chain allows us to share functionality between objects.
 
 

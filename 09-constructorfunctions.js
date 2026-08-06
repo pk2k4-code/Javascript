@@ -9,7 +9,7 @@ function Person(name, age, gender) {
 
 // Creating a new object using the Person constructor function
 let john = new Person("John", 30, "male");
-console.log(john); // This will give us the john object with its properties name, age and   gender. Its output will be { name: 'John', age: 30, gender: 'male' }
+console.log(john); // This will give us the john object with its properties name, age and gender. Its output will be { name: 'John', age: 30, gender: 'male' }
 
 // Example 2:
 function Car(model, color, price) {

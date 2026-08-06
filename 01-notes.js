@@ -24,7 +24,7 @@ else{
     console.log("The score is not a number");
 }
 
-// If we dont declae any variable before using them, then they will be created as global variables. This can lead to unexpected behavior and bugs in our code. It is a good practice to always declare our variables using let, const, or var before using them. For example, if we do x = 10; without declaring x first, it will create a global variable x with the value 10. But if we do let x = 10; it will create a block-scoped variable x with the value 10.
+// If we dont declare any variable before using them, then they will be created as global variables. This can lead to unexpected behavior and bugs in our code. It is a good practice to always declare our variables using let, const, or var before using them. For example, if we do x = 10; without declaring x first, it will create a global variable x with the value 10. But if we do let x = 10; it will create a block-scoped variable x with the value 10.
 
 // To get the length of a string we can use string.length
 

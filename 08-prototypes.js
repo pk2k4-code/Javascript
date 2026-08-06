@@ -12,6 +12,7 @@ let asus = {
 Object.setPrototypeOf(asus, computer); // This will set the prototype of the asus object to the computer object. Now we can access the cpu and ram properties like this: console.log(asus.cpu); // This will give us 12 because the asus object now inherits from the computer object and has access to its properties and methods. console.log(asus.ram); // This will give us 16 because the asus object now inherits from the computer object and has access to its properties and methods.
 console.log(asus.cpu); // This will give us 12 because the asus object now inherits from the computer object and has access to its properties and methods.
 console.log(asus.ram); // This will give us 16 because the asus object now inherits from the computer object and has access to its properties and methods.
+console.log(computer.screen); // This will give us undefined because the computer object does not have a screen property and it does not inherit from the asus object.
 console.log(Object.getPrototypeOf(asus)); // This will give us the computer object because the asus object inherits from the computer object. Its output will be { cpu: 12, ram: 16 } because the computer object has two properties cpu and ram. We can also use the instanceof operator to check if an object is an instance of a particular constructor function or class. For example, if we have a constructor function Person and we create a new object john using the new keyword like this: let john = new Person("John", 30); then we can check if john is an instance of Person like this: console.log(john instanceof Person); // This will give us true because john is an instance of Person. We can also check if john is an instance of Object like this: console.log(john instanceof Object); // This will give us true because all objects in JavaScript inherit from Object.
 
 
@@ -28,7 +29,7 @@ let John = {
     gender: "male",
     __proto__: person
 }
-console.log(`John `, John.__proto__);
+console.log(`John `, John.__proto__);  // output: John  { eyes: 2, legs: 2, nose: 1 }
 console.log(`John has ${John.eyes} eyes, ${John.legs} legs and ${John.nose} nose.`);
 
 // Example 2:
@@ -44,5 +45,5 @@ let audi = {
     price: 40000,
 }
 Object.setPrototypeOf(audi, car);
-console.log(`Audi `, Object.getPrototypeOf(audi));
+console.log(`Audi `, Object.getPrototypeOf(audi));   // output: Audi  { horn: 1, tyres: 4, windows: 4, engine: 1 }
 console.log(`Audi has ${audi.horn} horn, ${audi.tyres} tyres, ${audi.windows} windows, ${audi.engine} engine and its model is ${audi.model} and its color is ${audi.color} and its price is ${audi.price}.`);

@@ -93,7 +93,9 @@ let person = {name: "Alice", age: 25, city: "New York"};
 for (let key in person) {
     console.log(key + ": " + person[key]);
 }
-
+// Output: name: Alice
+//         age: 25
+//         city: New York
 
 
 // Use a for-in loop to loop through an object containing city population. Stop the loop when the population of Berlin is found, and store all the cities population before Berlin in a new object. Print the new object to the console.

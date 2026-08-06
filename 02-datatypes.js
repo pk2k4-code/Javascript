@@ -4,7 +4,7 @@
 
 // String - represents textual data and is enclosed in single or double quotes or backticks(`).
 let name1 = "John Doe"; // String
-let name2 = "Jane Smith"; // String can be made like this as well
+let name2 = 'Jane Smith'; // String can be made like this as well
 let name3 = `Alice Johnson`; // String using backticks
 console.log(typeof name1); // Output: string
 console.log(`The three names are: ${name1}, ${name2}, and ${name3}`); // Here with the help of backticks we can bypass old concatenation method and use this one to join several variables.
@@ -13,11 +13,11 @@ console.log(`The three names are: ${name1}, ${name2}, and ${name3}`); // Here wi
 // Number - represents both integer and floating-point numbers.
 let age = 30; // Number
 let height = 5.9; // Number (floating-point)
-let sqroot = Math.sqrt(-1); // Number and its a special value of the Number datatype: NaN (Not a Number) - result of invalid mathematical operation like finding the square root of a negative number or dividing zero by zero.
-let posinfinityValue = 1 / 0; // Number and its a special value of the Number datatype: Infinity - result of dividing a number by zero.
-let neginfinityValue = -1 / 0; // Number and its a special value of the Number datatype: -Infinity - result of dividing a negative number by zero.
-let zero1 = -5 * 0; // Number and its a special value of the Number datatype: -0 - result of multiplying a negative number by zero.
-let zero2 = 5 * 0; // Number and its a special value of the Number datatype: +0 - result of multiplying a positive number by zero.
+let sqroot = Math.sqrt(-1); // Number and its a special value of the Number datatype: NaN (Not a Number) -> result of invalid mathematical operation like finding the square root of a negative number or dividing zero by zero.
+let posinfinityValue = 1 / 0; // Number and its a special value of the Number datatype: Infinity -> result of dividing a number by zero.
+let neginfinityValue = -1 / 0; // Number and its a special value of the Number datatype: -Infinity -> result of dividing a negative number by zero.
+let zero1 = -5 * 0; // Number and its a special value of the Number datatype: -0 -> result of multiplying a negative number by zero.
+let zero2 = 5 * 0; // Number and its a special value of the Number datatype: +0 -> result of multiplying a positive number by zero.
 console.log(typeof age); // Output: number
 console.log(typeof sqroot); // Output: number
 console.log(typeof posinfinityValue); // Output: number
@@ -70,7 +70,7 @@ console.log(typeof uniqueSymbol1); // Output: symbol
 let person = {
   name: "John Doe",
   age: 30,
-  isEmployed: true,
+  isEmployed: true
 };
 console.log(person); // Output: { name: "John Doe", age: 30, isEmployed: true }
 console.log(person.name); // Output: John Doe
