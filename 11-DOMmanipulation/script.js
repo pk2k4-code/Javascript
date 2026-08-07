@@ -36,3 +36,35 @@ document.getElementById("removeLastTask").addEventListener("click", function() {
     let taskList = document.getElementById("taskList");
     taskList.lastElementChild.remove();
 });
+
+// Example 6
+
+document.getElementById("teaList").addEventListener("click", function(event) {
+    if(event.target && event.target.matches(".teaItem")){
+        alert("You clicked on: " + event.target.textContent);
+    }
+});
+
+// Example 7
+
+document.getElementById("feedbackForm").addEventListener("submit", function(event){
+    event.preventDefault();  // here we write this line to stop the web from doing its deafult behavior, like for a form its default behavior is to submit the form and refresh the page, but sometimes we dont want that, we want to validate the data first before submittting the form and thats is why we use this
+    let feedback = document.getElementById("feedbackInput").value;
+    console.log(feedback);
+    document.getElementById(
+      "feedbackDisplay"
+    ).textContent = `Feedback is: ${feedback}`;
+});
+
+// Example 8
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("domStatus").textContent = "DOM fully loaded";
+});
+
+// Example 9
+
+document.getElementById("toggleHighlight").addEventListener("click", function(){
+    let text = document.getElementById("descriptionText");
+    text.classList.toggle("highlight");
+})
