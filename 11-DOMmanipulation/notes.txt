@@ -1,0 +1,10 @@
+To change any element or do anything with the element we need to first grab the element.
+Now there are several ways for grabbing an element:
+document.querySelector(id-> like #id or class-> like .class)
+document.querySelectorAll(id or class or name-> like button)
+docunemt.get -> this will give many options like getElementByClassName or getElementByName or getElementByTagName or getElementById
+
+Now once we have grabbed the element we need to choose the event which will trigger the change and for which we use addEventListener(params).
+here inside the paranthesis there are 2 parameters the first one is the event and the second parameter is the block of code or the function that should be performed.
+
+Here in example 2, first we select the unordered list and then add a function to be executed on click in which first we select the list and then in the list through the firstElementChild we select the first element, mind that it selects the whole line: <li class="chai">New York</li> and not only New York, and after that through classList we add the highlight class to this element by which it highlights when we click the button.
