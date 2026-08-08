@@ -4,6 +4,17 @@ document.querySelector(id-> like #id or class-> like .class)
 document.querySelectorAll(id or class or name-> like button)
 docunemt.get -> this will give many options like getElementByClassName or getElementByName or getElementByTagName or getElementById
 
+DOM - When a webpage loads, the browser creates something called the DOM (Document Object Model).The DOM is basically a JavaScript representation of your HTML.
+For example this HTML:
+<body>
+    <h1>Hello</h1>
+</body>
+becomes something like this tree:
+document -> body -> H1 -> "Hello"
+So, when you write: document.getElementById("taskInput");
+you're saying:
+"Hey browser, search your HTML for the element whose id is taskInput."
+
 Now once we have grabbed the element we need to choose the event which will trigger the change and for which we use addEventListener(params).
 here inside the paranthesis there are 2 parameters the first one is the event and the second parameter is the block of code or the function that should be performed.
 
