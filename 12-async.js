@@ -2,7 +2,7 @@
 
 // Example 1:
 
-/*function simulateAsyncTask() {
+function simulateAsyncTask() {
   console.log('Task started');
   setTimeout(() => {
     console.log('Task finished');
@@ -26,7 +26,7 @@ console.log("Program started");
 for(let i = 0; i<7; i++){
     console.log(i);
 }
-*/
+
 // Example 3:
 
 function fetchDataWithCallback(callback) {

@@ -21,3 +21,4 @@ async function getUserData() {
   }
 }
 getUserData();
+// to use await in a function, we need to declare the function as async. The async keyword is used to define an asynchronous function, which returns a Promise. Inside an async function, we can use the await keyword to pause the execution of the function until a Promise is resolved or rejected. This allows us to write asynchronous code in a more synchronous and readable manner.

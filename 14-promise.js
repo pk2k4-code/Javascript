@@ -11,7 +11,7 @@ function fetchData() {
       } else {
         reject("Error fetching data");
       }
-    }, 3000);
+    }, 3000);  // here 3000 is the time in milliseconds after which the promise will be resolved or rejected
   });
 }
 
